@@ -19,15 +19,17 @@ public class CalculatorImpl implements Calculator {
 		switch (op) {
 		case add:
 			return a + b;
-		case sub:
-			return a - b;
-		case div:
-			double c = a / b;
-			if (Double.isInfinite(c))
-				throw new CalculatorException("Division by zero");
-			return c;
-		case mul:
-			return a * b;
+			case sub:
+				return a - b;
+			case div:
+				double c = a / b;
+				if (Double.isInfinite(c))
+					throw new CalculatorException("Division by zero");
+				return c;
+			case mul:
+				return a * b;
+			case mod:
+				return a % b;
 		}
 		return 0;
 	}
